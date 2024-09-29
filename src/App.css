@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+body {
+  margin: 0px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*Make all sections flexboxes*/
+.flex-container {
+  width: min(730px, 100%);
+  /*Make it so that resume doesn't overflow*/
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: "Calibri";
 }
 
-.App-link {
-  color: #61dafb;
+/*Make all right columns bave 18px italic bold text*/
+body>div:not(:first-child)> :nth-child(1) {
+  font-style: italic;
+  font-weight: 900;
+  font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*Make all left columns bave 17px text*/
+body>div:not(:first-child)> :nth-child(2) {
+  font-size: 17px;
+}
+
+body>div {
+  justify-content: space-between;
+}
+
+body>div:not(:first-child) {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 25px;
+}
+
+#c1 {
+  padding-left: 25px;
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 60px;
+  border-bottom: 5px solid gold;
+}
+
+#c3,
+#c4,
+#c5 {
+  border-top: solid 1.5px black;
+}
+
+
+.workexperience>div> :nth-child(1) {
+  font-weight: 900;
+  padding-bottom: 5px;
+}
+
+.workexperience> :nth-child(1)> :nth-child(2) {
+  padding-bottom: 20px;
+}
+
+.intro * {
+  margin: 0;
+}
+
+
+.personalinfo,
+.workexperience,
+.education,
+.keyskills {
+  flex: 0 10 500px;
+}
+
+.keyskills {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.keyskills div {
+  width: 33%;
+}
+
+#datascientist {
+  font-weight: normal;
+}
+
+.education>div {
+  padding-bottom: 3px;
+}
+
+.education>:nth-child(4n + 1) {
+  font-weight: 900;
+}
+
+.education>:nth-child(5) {
+  padding-top: 10px;
+}
+
+#emailwebmobile {
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
+#emailwebmobile>div {
+  padding-bottom: 4px;
 }
